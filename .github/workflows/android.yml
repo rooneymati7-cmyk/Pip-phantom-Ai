@@ -23,7 +23,10 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-
+      with:
+        packages: |
+  platform-tools
+  platforms;android-35
       - name: Build APK
         run: |
           if [ -f gradlew ]; then
